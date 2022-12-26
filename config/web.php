@@ -2,7 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
-
+$container = require __DIR__ . '/container.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
@@ -12,6 +12,7 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'name' => 'Americor Test',
+    'container' => $container,
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
